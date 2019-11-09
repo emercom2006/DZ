@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+function generate(length) {
+	var arr = [];
+		for(var i = 0; i < length; i++)
+		{
+		var randomNumbers = getRandomNumber(100);
+		arr.push(randomNumbers);
+	}
+	return arr;
+}
+var numbers = generate(1);
+
+function getRandomNumber(max){
+	return Math.round(Math.random() * max);
+}
+
+function max(a) {
+	if (a % 2) {
+		alert("Результатом работы функции: Является ли число " + a + " четным.\n Ответ: нет");
+	} else {
+		alert("Результатом работы функции: Является ли число " + a + " четным.\n Ответ: да");
+	}
+	
+}
+var a = numbers[0];
+var answer = max(a);
+
+
+</script>
+
+</body>
+</html>

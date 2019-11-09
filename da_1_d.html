@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+function generate(length) {
+	var arr = [];
+		for(var i = 0; i < length; i++)
+		{
+		var randomNumbers = getRandomNumber(100);
+		arr.push(randomNumbers);
+	}
+	return arr;
+}
+var numbers = generate(2);
+
+function getRandomNumber(max){
+	return Math.round(Math.random() * max);
+}
+
+
+
+function max(a ,b) {
+	if (a > b) {
+		return b;
+	} else {
+		return a;
+	}
+	
+}
+var a = numbers[0];
+var b = numbers[1];
+var answer = max(a, b);
+
+alert("Результатом работы функции: какое число меньше " + a + ' или ' + b + ".\n Ответ " + answer);
+
+</script>
+
+</body>
+</html>

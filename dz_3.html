@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Урок 3.3</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+score = 0;
+var riddle = [
+["Если ДВА перевернуть \nИ внимательно взглянуть, \nТак и сяк взглянуть опять,\nТо получим цифру:","Пять","пять","5","ПЯТЬ"],
+["Цифра шесть перевернулась, \nНовой цифрой обернулась","Девять","ДЕВЯТЬ","9", "девять"],
+["С хитрым носиком сестрица \nСчёт откроет ...","Единицв","единица","ЕДИНИЦА","1"],
+];
+
+while(riddle.length != 0){
+	var i = parseInt(Math.random() * riddle.length);
+	var userAnswer = prompt(riddle[i][0]);
+	if (userAnswer == riddle[i][1] || userAnswer == riddle[i][2] || userAnswer == riddle[i][3] || userAnswer == riddle[i][4]) {
+		alert("Правильно!");
+		riddle.splice(i, 1);
+		score++
+	} else {
+		alert("Не правильно");
+		riddle.splice(i, 1);
+	}
+}
+
+alert("Вы правильно угадали " + score + " загадки.");
+
+
+
+	</script>
+
+</body>
+</html>
